@@ -12,8 +12,9 @@ c = input("Is it a rainy day (yes or no)")
 temp = input("Is the temperature > than 80 degrees? (yes or no)")
 response = ["Go to the beach", "Do not go to the beach"]
 def beach_response():
- if a == "yes" and b == "yes" and c == "yes" and temp == "no" or a == "no" and b == "no" and c == "no" and temp == "yes":
-   return print(response[0])
- else:
+ return a == "no" and b == "no" and c == "no" or temp == "yes" 
+if beach_response():
+    print(response[0])
+else:
     print(response[1])
 beach_response()
