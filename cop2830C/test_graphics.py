@@ -9,7 +9,7 @@
 from graphics import *
 
 ### Instantiate Graphics Window
-win = GraphWin('my window', 1000,1000)
+win = GraphWin('my window', 800, 800)
 
 ### Start your nested loops here
 for x in range(10):
@@ -20,13 +20,24 @@ for x in range(10):
         pt = Point(30 + 100 * x/2, y * 50)
 
         # Then draw 
-        rect = Rectangle(Point(30, 20), pt)
+        rect = Rectangle(pt, pt)
+        cir = Circle(pt, 25)
+        line = Line(pt, Point(4,4))
+
         # Set the color
         rect.setOutline('orange')
-        rect.setFill('purple')
+        rect.setFill('green')
+
+        line.setOutline('pink')
+        line.setFill('pink')
+
+        cir.setOutline('red')
+        cir.setFill('yellow')
 
         # Then render
-        rect.draw(win)
+        # rect.draw(win)
+        # cir.draw(win)
+        line.draw(win)
 
 ### end your loop here
 
